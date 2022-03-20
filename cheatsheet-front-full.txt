@@ -1,0 +1,100 @@
+reStructured Text & Sphinx Cheatsheet
+Section Headings
+===============
+Level 1 Heading
+===============
+
+Level 2 Heading
+---------------
+
+Level 1 Heading
+^^^^^^^^^^^^^^^
+
+Level 2 Heading
++++++++++++++++
+
+• Heading structure is determined only by occurence order. 
+• Heading overline is optional 
+• Under/overlines use the following characters:
+Recommended: = - ` : . ' " ~ ^ _ * + #
+! $ % & ( ), / ; < > ? @ [ \ ] { | }
+Styles
+*Bold text* 
+**Italic text** 
+``Inline literal/code``
+:sup:`super`\ Script 
+:sub:`sub`\ Script
+Targets and Links
+Anchor target      .. anchorbyref: 
+                 .. _Anchor link by text:
+External target  .. _External link name: http://example.com 
+Footnote target  .. [1] A footnote 
+Citation target  .. [cit1] A global citation
+External links  `External link <http://example.com>`_
+                  `External link name`_ or `Example <External link name_>`_
+Internal links    `Anchor link by text`_ or `Anchor <Anchor link by text_>`
+                  `Anchor link by ref <anchorbyref_>`_        
+                  :ref:`anchorbyref`
+
+Footnote          Reference a footnote [1]_ 
+                  or a global citation [cit1]_
+Section link      Section Heading
+                  —--------------
+                  `Link <Section Heading_>`_
+Bullet Lists
+* Unordered item 
+* Unordered item
+  1. Nested ordered item 
+  2. Nested ordered item
+    a. Nested ordered item
+* Unordered item
+Definition Lists
+First term
+   Definition of first term,
+   it can span multiple lines.
+
+Second term
+   Definition of second term.
+
+   Indent additional paragraphs.
+Tables
+============  ========  ========
+Simple table  Header 2  Header 3
+============  ========  ========
+Column 1      Column 2  Column 3 
+Horizontal column span  ...
+----------------------  --------
+...           ...       ...   
+============  ========  ========
+        
++----------+----------+----------+
+|   Grid   | Header 2 | Header 3 |
+|   table  |          |          |
++==========+==========+==========+
+| Column 1 | Column 2 | Vertical |
++----------+----------+ column   |
+| Horizontal span     | span     |
++----------+----------+----------+
+
+Simple tables and grid tables can be replaced with external CSV files, using the csv-table directive.
+Literal Code Blocks
+Here is a literal block::
+   Its contents are indented.
+::
+   The :: marker is omitted here
+
+The :: marker will insert a ":" in the output in the above example. To omit the “:” precede the :: marker with white space or use the marker on a line of its own.
+
+Images and Figures
+.. image:: image.png
+   :height: 100px
+   :width: 100px
+   :align: bottom
+   :target: target_
+
+.. figure:: image.png
+   :height: 100px
+   Figures are images with captions.
+   They support all image options.
+Comments
+.. This is a single line comment, comments can span multiple lines as well.
