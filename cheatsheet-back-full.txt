@@ -1,0 +1,150 @@
+Directives
+reStructured Text directives consist of a directive type, arguments, and any number of options. Some directives expect a block of indented content.
+
+.. type:: arguments
+   :option: option value
+
+   Directive content
+
+.. container:: [container class]
+.. csv-table:: [table title]
+   :header: CSV data for headers 
+   :widths: number [,number]
+   :file: filename
+   :encoding: encoding
+   :header-rows: number
+   :delim: character, "tab", or "space"
+   :quote: character
+   :escape: character
+.. rubric:: title
+Content Block Directives
+.. topic:: Examples
+
+   A topic block
+
+.. note::
+   This is a note.
+
+.. versionchanged:: 1.3
+   Something changed.
+
+.. topic:: [title]
+.. sidebar:: [title]
+   :subtitle: subtitle 
+.. admonition:: title 
+.. attention:: 
+.. caution:: 
+.. danger::
+.. error::
+.. hint::
+.. important::
+.. note:: 
+.. tip::
+.. warning::
+.. seealso::
+.. deprecated:: [version]
+.. versionadded:: [version] 
+.. versionchanged:: [version]
+.. math:: 
+.. raw:: output format
+
+.. math::
+   a_1 = b_1 + c_1
+.. raw:: html
+
+   <b>HTML output</b>
+
+Table of Contents
+.. toctree::
+   :maxdepth: number of title levels
+   :glob:
+   :hidden:
+   :numbered:
+   :caption: caption text
+   :titlesonly:
+
+   [Include paths]
+
+Some of the language lexers supported by the code example language option: none, python, js, php, ruby, perl, C, cpp, csharp, go, scala, lisp, coffee, dart, julia, lua, html, css, sass, json, yaml, diff, sql, bash, and shell-session
+Python Domain
+Domain directives expect a domain directive type, the construct name as a directive argument, and optionally, domain directive options.
+
+.. py:method:: MyClass.foo(args)
+   :param args: Arguments
+   :type args: list
+
+   Link to :py:meth:`MyClass.foo`.
+
+Python Domain Directives 
+.. py:module:: module 
+.. py:class:: signature
+.. py:function:: signature 
+.. py:data:: name
+.. py:exception:: name
+.. py:attribute:: name
+.. py:method:: signature 
+.. py:staticmethod:: signature
+.. py:classmethod:: signature
+.. py:decorator:: signature 
+.. py:currentmodule:: module
+
+Python Domain References 
+:py:mod:`module`
+:py:class:`signature`
+:py:func:`signature`
+:py:data:`name` 
+:py:exc:`name`
+:py:attr:`name` 
+:py:meth:`signature`
+:py:const:`name`
+Python Domain Directive Options
+:param [type] name: description
+:type name: type 
+:raises class: description
+:var name: description
+:vartype name: type 
+:returns description:
+:rtype type:
+
+There are a number of other Sphinx language domains for representing code constructs in reference documentation: rst, c, cpp, js, ruby, php, dotnet, Scala, go, lisp, coffee, and others.
+
+Code Examples
+.. highlight:: language
+   :linenothreshold: number
+.. code-block:: [language]
+   :linenos:
+   :emphasize-lines: number [, number] 
+   :caption: caption text
+   :name: block target name
+
+   [Code example, indented] 
+.. literalinclude:: filename
+   :language: language 
+   :emphasize-lines: number [,number]
+   :linenos: 
+   :encoding: encoding
+   :diff: filename
+   :dedent: number
+References
+:role:`title <target>`      Link to target with link text title
+:role:`!title`              Don't create link or reference
+:role:`~module.Object`      Use last element, Object, for link text
+Cross-reference roles
+:any:`name` 
+:doc:`document name`
+:download:`filename`
+:envvar:`name` 
+:keyword:`python keyword` 
+:option:`CLI option`
+Other inline markup roles
+:abbr:`long (abbreviation)`
+:command:`name` 
+:kbd:`keystrokes`
+:program:`program`
+:pep:`number`
+:rfc:`number`
+
+Brought to you by **Read the Docs**.
+We offer `private hosting <http://readthedocs.com>`_ 
+and open source hosting <http://readthedocs.org>`_ 
+for *Sphinx* documentation projects.
